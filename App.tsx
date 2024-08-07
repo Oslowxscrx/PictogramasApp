@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
   },
   mainPictogramsContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'center',
     paddingVertical: 20,
   },
   mainPictogram: {
@@ -104,6 +104,7 @@ const styles = StyleSheet.create({
     borderColor: '#4a90e2',
     justifyContent: 'center',
     alignItems: 'center',
+    marginHorizontal: 10,
   },
   mainPictogramImage: {
     width: '75%',
