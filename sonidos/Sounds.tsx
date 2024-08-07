@@ -18,7 +18,7 @@ export const sound2 = new Sound('no.mp3', Sound.MAIN_BUNDLE, error => {
   }
 });
 
-export const sound3 = new Sound('comer1.mp3', Sound.MAIN_BUNDLE, error => {
+export const sound3 = new Sound('comer.mp3', Sound.MAIN_BUNDLE, error => {
   if (error) {
     console.log('Falla al cargar el sonido', error);
   } else {
@@ -35,7 +35,7 @@ export const sound4 = new Sound('papa.mp3', Sound.MAIN_BUNDLE, error => {
   }
 });
 
-export const sound5 = new Sound('mama1.mp3', Sound.MAIN_BUNDLE, error => {
+export const sound5 = new Sound('mama.mp3', Sound.MAIN_BUNDLE, error => {
   if (error) {
     console.log('Falla al cargar el sonido', error);
   } else {
@@ -96,5 +96,29 @@ export const sound12 = new Sound('jugar.mp3', Sound.MAIN_BUNDLE, error => {
     console.log('Falla al cargar el sonido', error);
   } else {
     console.log('El sonido se cargo correctamente: jugar.mp3');
+  }
+});
+
+export const sound13 = new Sound('pintar.mp3', Sound.MAIN_BUNDLE, error => {
+  if (error) {
+    console.log('Falla al cargar el sonido', error);
+  } else {
+    console.log('El sonido se cargo correctamente: pintar.mp3');
+  }
+});
+
+export const sound14 = new Sound('musica.mp3', Sound.MAIN_BUNDLE, error => {
+  if (error) {
+    console.log('Falla al cargar el sonido', error);
+  } else {
+    console.log('El sonido se cargo correctamente: musica.mp3');
+  }
+});
+
+export const sound15 = new Sound('abrazo.mp3', Sound.MAIN_BUNDLE, error => {
+  if (error) {
+    console.log('Falla al cargar el sonido', error);
+  } else {
+    console.log('El sonido se cargo correctamente: abrazo.mp3');
   }
 });

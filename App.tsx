@@ -10,15 +10,15 @@ import {
   Text,
   Dimensions,
 } from 'react-native';
-import { sound1, sound2, sound3, sound4, sound5, sound6, sound7, sound8, sound9, sound10, sound11, sound12 } from './sonidos/Sounds'; 
+import { sound1, sound2, sound3, sound4, sound5, sound6, sound7, sound8, sound9, sound10, sound11, sound12, sound13, sound14, sound15 } from './sonidos/Sounds'; 
 import Sound from 'react-native-sound';
 
 const { width } = Dimensions.get('window');
 
 // Función para reproducir el sonido
-const playSound = (sound) => {
+const playSound = (sound: Sound) => {
   console.log('Attempting to play sound...');
-  sound.play(success => {
+  sound.play((success: any) => {
     if (success) {
       console.log('Sound played successfully');
     } else {
@@ -88,6 +88,18 @@ const App = () => {
           <TouchableOpacity onPress={() => playSound(sound12)} style={styles.pictogram}>
             <Image source={require('./images/jugar.png')} style={styles.pictogramImage} />
             <Text style={styles.pictogramText}>Jugar</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => playSound(sound13)} style={styles.pictogram}>
+            <Image source={require('./images/pintar.png')} style={styles.pictogramImage} />
+            <Text style={styles.pictogramText}>Pintar</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => playSound(sound14)} style={styles.pictogram}>
+            <Image source={require('./images/musica.png')} style={styles.pictogramImage} />
+            <Text style={styles.pictogramText}>Musica</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => playSound(sound15)} style={styles.pictogram}>
+            <Image source={require('./images/abrazo.png')} style={styles.pictogramImage} />
+            <Text style={styles.pictogramText}>abrazo</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>
