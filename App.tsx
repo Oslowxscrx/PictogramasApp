@@ -34,7 +34,7 @@ const App = () => {
       <StatusBar barStyle="light-content" backgroundColor={styles.header.backgroundColor} />
       <ScrollView contentInsetAdjustmentBehavior="automatic">
         <View style={styles.header}>
-          <Text style={styles.title}>Pictogramas</Text>
+          <Text style={styles.title}>Comunicador</Text>
         </View>
 
         <View style={styles.topPictogramsContainer}>
@@ -114,20 +114,20 @@ const styles = StyleSheet.create({
     backgroundColor: '#AAFFD1',
   },
   header: {
-    backgroundColor: '#448B66', // Color de fondo del encabezado
+    backgroundColor: '#448B66',
     padding: 20,
     alignItems: 'center',
     borderBottomWidth: 2,
     borderBottomColor: '#003c71',
   },
   title: {
-    fontSize: 32, // Tamaño de fuente más grande para resaltar
+    fontSize: 32,
     fontWeight: 'bold',
     color: '#fff',
-    fontFamily: 'Cursive', // Cambia el estilo de la letra según prefieras
-    textShadowColor: 'orange', // Color del borde
-  textShadowOffset: { width: -1, height: 1 }, // Desplazamiento del borde
-  textShadowRadius: 8, // Radio del borde
+    fontFamily: 'Cursive',
+    textShadowColor: 'orange',
+    textShadowOffset: { width: -1, height: 1 },
+    textShadowRadius: 8,
   },
   topPictogramsContainer: {
     flexDirection: 'row',
@@ -141,15 +141,21 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
   },
   pictogram: {
-    width: width / 3 - 20, // Ajuste de tamaño para que se ajuste a 3 columnas
+    width: width / 3 - 20,
     height: width / 3 - 20,
     margin: 10,
     borderRadius: 10,
     borderWidth: 2,
-    borderColor: 'black', // Color negro para los bordes
+    borderColor: 'black',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#FFFFFF', // Fondo blanco para los cuadros
+    backgroundColor: '#FFFFFF',
+    // Agregar sombra para efecto 3D
+    shadowColor: '#000',
+    shadowOffset: { width: 5, height: 5 },
+    shadowOpacity: 0.9,
+    shadowRadius: 5,
+    elevation: 11, // Para Android
   },
   pictogramImage: {
     width: '100%',
