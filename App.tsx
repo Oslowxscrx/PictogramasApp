@@ -31,16 +31,13 @@ const playSound = (sound: Sound) => {
 const App = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar
-        barStyle="light-content"
-        backgroundColor={styles.header.backgroundColor}
-      />
+      <StatusBar barStyle="light-content" backgroundColor={styles.header.backgroundColor} />
       <ScrollView contentInsetAdjustmentBehavior="automatic">
         <View style={styles.header}>
           <Text style={styles.title}>Pictogramas</Text>
         </View>
 
-        <View style={styles.pictogramsContainer}>
+        <View style={styles.topPictogramsContainer}>
           <TouchableOpacity onPress={() => playSound(sound1)} style={styles.pictogram}>
             <Image source={require('./images/si.jpg')} style={styles.pictogramImage} />
             <Text style={styles.pictogramText}>Sí</Text>
@@ -49,6 +46,9 @@ const App = () => {
             <Image source={require('./images/no.jpg')} style={styles.pictogramImage} />
             <Text style={styles.pictogramText}>No</Text>
           </TouchableOpacity>
+        </View>
+
+        <View style={styles.pictogramsContainer}>
           <TouchableOpacity onPress={() => playSound(sound3)} style={styles.pictogram}>
             <Image source={require('./images/comer.jpg')} style={styles.pictogramImage} />
             <Text style={styles.pictogramText}>Comer</Text>
@@ -99,7 +99,7 @@ const App = () => {
           </TouchableOpacity>
           <TouchableOpacity onPress={() => playSound(sound15)} style={styles.pictogram}>
             <Image source={require('./images/abrazo.png')} style={styles.pictogramImage} />
-            <Text style={styles.pictogramText}>abrazo</Text>
+            <Text style={styles.pictogramText}>Abrazo</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>
@@ -111,19 +111,28 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#AAFFD1',
   },
   header: {
-    backgroundColor: '#4a90e2',
+    backgroundColor: '#448B66', // Color de fondo del encabezado
     padding: 20,
     alignItems: 'center',
     borderBottomWidth: 2,
     borderBottomColor: '#003c71',
   },
   title: {
-    fontSize: 24,
+    fontSize: 32, // Tamaño de fuente más grande para resaltar
     fontWeight: 'bold',
     color: '#fff',
+    fontFamily: 'Cursive', // Cambia el estilo de la letra según prefieras
+    textShadowColor: 'orange', // Color del borde
+  textShadowOffset: { width: -1, height: 1 }, // Desplazamiento del borde
+  textShadowRadius: 8, // Radio del borde
+  },
+  topPictogramsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginVertical: 10,
   },
   pictogramsContainer: {
     flexDirection: 'row',
@@ -137,9 +146,10 @@ const styles = StyleSheet.create({
     margin: 10,
     borderRadius: 10,
     borderWidth: 2,
-    borderColor: '#4a90e2',
+    borderColor: 'black', // Color negro para los bordes
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#FFFFFF', // Fondo blanco para los cuadros
   },
   pictogramImage: {
     width: '100%',
